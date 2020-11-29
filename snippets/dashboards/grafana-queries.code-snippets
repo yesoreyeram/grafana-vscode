@@ -1,0 +1,34 @@
+{
+    "Grafana Random Walk Query": {
+        "prefix": "grafana-query-randomwalk",
+        "body": [
+            "{",
+            "      \"queryType\": \"randomWalk\",",
+            "      \"refId\": \"${1:refId}\"",
+            "}"
+        ],
+        "description": "Grafana Random Walk Query"
+    },
+    "Grafana Prometheus Query": {
+        "prefix": "grafana-query-prometheus",
+        "body": [
+            "{",
+            "      \"refId\": \"${1:refId}\",",
+            "      \"expr\": \"${2:query-expression}\",",
+            "      \"legendFormat\": \"\",",
+            "      \"interval\": \"\"",
+            "}"
+        ],
+        "description": "Grafana Prometheus Query"
+    },
+    "Grafana Graphite Query": {
+        "prefix": "grafana-query-graphite",
+        "body": [
+            "{",
+            "      \"refId\": \"${1:refId}\",",
+            "      \"target\": \"${2:query}\"",
+            "}"
+        ],
+        "description": "Grafana Graphite Query"
+    }
+}

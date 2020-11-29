@@ -1,0 +1,56 @@
+{
+    "Notifiers": {
+        "prefix": "grafana-notifiers",
+        "body": [
+            "apiVersion: 1",
+            "notifiers:",
+            ""
+        ],
+        "description": "Notifiers Provisioning - Grafana"
+    },
+    "Email Notifier": {
+        "prefix": "grafana-notifiers-email",
+        "body": [
+            "- name: ${1:default-email}",
+            "  type: email",
+            "  uid: ${3:email_notifier1}",
+            "  org_id: 1",
+            "  is_default: false  ",
+            "  disableResolveMessage: false",
+            "  sendReminder: false",
+            "  frequency: \"\"",
+            "  settings:",
+            "      addresses: ${2:example@example.com}",
+            "      autoResolve: true",
+            "      httpMethod: \"POST\"",
+            "      severity: \"critical\"",
+            "      uploadImage: true",
+            ""
+        ],
+        "description": "Email Notifier Provisioning - Grafana"
+    },
+    "Slack Notifier": {
+        "prefix": "grafana-notifiers-slack",
+        "body": [
+            "- name: ${1:default-slack}",
+            "  type: slack",
+            "  uid: ${4:slack_notifier1}",
+            "  org_id: 1",
+            "  is_default: false  ",
+            "  disableResolveMessage: false",
+            "  sendReminder: false",
+            "  frequency: \"\"",
+            "  settings:",
+            "      url: ${2:https://slack.com}",
+            "      username: \"\"",
+            "      recipient: \"${3}\"",
+            "      token: \"\"",
+            "      autoResolve: true",
+            "      httpMethod: \"POST\"",
+            "      severity: \"critical\"",
+            "      uploadImage: true",
+            ""
+        ],
+        "description": "Slack Notifier Provisioning - Grafana"
+    }
+}

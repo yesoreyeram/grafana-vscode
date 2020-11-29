@@ -1,0 +1,190 @@
+{
+    "Datasources": {
+        "prefix": "grafana-datasources",
+        "body": [
+            "apiVersion: 1",
+            "datasources:",
+            ""
+        ],
+        "description": "Datasources Provisioning - Grafana"
+    },
+    "Graphite Datasource": {
+        "prefix": "grafana-datasources-graphite",
+        "body": [
+            "- name: ${1:Graphite}",
+            "  type: graphite",
+            "  access: proxy",
+            "  orgId: 1",
+            "  uid: my_unique_uid",
+            "  url: ${2:http://localhost:8080}",
+            "  user:",
+            "  database:",
+            "  basicAuth:",
+            "  basicAuthUser:",
+            "  withCredentials:",
+            "  isDefault:",
+            "  jsonData:",
+            "    graphiteVersion: '1.1'",
+            "    tlsAuth: true",
+            "    tlsAuthWithCACert: true",
+            "  secureJsonData:",
+            "    tlsCACert: '...'",
+            "    tlsClientCert: '...'",
+            "    tlsClientKey: '...'",
+            "    password:",
+            "    basicAuthPassword:",
+            "  version: 1",
+            "  editable: false",
+            ""
+        ],
+        "description": "Graphite Datasource - Grafana"
+    },
+    "InfluxDB V1 Datasource": {
+        "prefix": "grafana-datasources-influxdb-v1",
+        "body": [
+            "- name: ${1:InfluxDB}",
+            "  type: influxdb",
+            "  orgId: 1",
+            "  access: proxy",
+            "  database: site",
+            "  user: grafana",
+            "  password: grafana",
+            "  url: ${2:http://localhost:8086}",
+            "  jsonData:",
+            "    httpMode: GET",
+            ""
+        ],
+        "description": "InfluxDB V1 Datasource - Grafana"
+    },
+    "InfluxDB (Flux) Datasource": {
+        "prefix": "grafana-datasources-influxdb",
+        "body": [
+            "- name: ${1:Flux}",
+            "  type: influxdb",
+            "  orgId: 1",
+            "  access: proxy",
+            "  url: ${2:http://localhost:8086}",
+            "  secureJsonData:",
+            "    token: token",
+            "  jsonData:",
+            "    version: Flux",
+            "    organization: organization",
+            "    defaultBucket: bucket",
+            "    tlsSkipVerify: true",
+            ""
+        ],
+        "description": "InfluxDB (Flux) Datasource - Grafana"
+    },
+    "Prometheus Datasource": {
+        "prefix": "grafana-datasources-prometheus",
+        "body": [
+            "- name: ${1:Prometheus}",
+            "  type: prometheus",
+            "  access: proxy",
+            "  orgId: 1",
+            "  url: ${2:http://localhost:9090}",
+            ""
+        ],
+        "description": "Prometheus Datasource - Grafana"
+    },
+    "Simple JSON Datasource": {
+        "prefix": "grafana-datasources-simple-json",
+        "body": [
+            "- name: ${1:My API}",
+            "  type: grafana-simple-json-datasource",
+            "  access: proxy",
+            "  orgId: 1",
+            "  uid: ${1:myapi}",
+            "  url: ${2:http://localhost:8080/api}",
+            "  isDefault:",
+            "  version: 1",
+            "  editable: false",
+            ""
+        ],
+        "description": "Simple JSON Datasource - Grafana"
+    },
+    "CloudWatch Datasource (AWS SDK Auth)": {
+        "prefix": "grafana-datasources-cloudwatch",
+        "body": [
+            "- name: ${1:Cloudwatch}",
+            "  type: cloudwatch",
+            "  orgId: 1",
+            "  jsonData:",
+            "    authType: default",
+            "    defaultRegion: ${2:eu-west-2}",
+            "    # assumeRoleArn: arn:aws:iam::123456789012:root",
+            ""
+        ],
+        "description": "Cloud Watch (AWS SDK Auth) Datasource - Grafana"
+    },
+    "CloudWatch Datasource (Access Key and Secret)": {
+        "prefix": "grafana-datasources-cloudwatch-access-key-secret",
+        "body": [
+            "- name: ${1:Cloudwatch}",
+            "  type: cloudwatch",
+            "  orgId: 1",
+            "  jsonData:",
+            "    authType: default",
+            "    defaultRegion: ${2:eu-west-2}",
+            "  secureJsonData:",
+            "    accessKey: '${3:accessKey}'",
+            "    secretKey: '${4:secretKey}'",
+            ""
+        ],
+        "description": "CloudWatch (Access Key and Secret Auth) Datasource - Grafana"
+    },
+    "CloudWatch Datasource (credentials' profile name)": {
+        "prefix": "grafana-datasources-cloudwatch-credentials-profile",
+        "body": [
+            "- name: ${1:Cloudwatch}",
+            "  type: cloudwatch",
+            "  orgId: 1",
+            "  jsonData:",
+            "    authType: keys",
+            "    customMetricsNamespaces: '${3:CWAgent,CustomNameSpace}'",
+            "    defaultRegion: ${2:eu-west-2}",
+            "    profile: secondary",
+            ""
+        ],
+        "description": "Cloud Watch (Credentials' Profile Name Auth) Datasource - Grafana"
+    },
+    "Azure Monitor Datasource": {
+        "prefix": "grafana-datasources-azure",
+        "body": [
+            "- name: ${1:Azure Monitor}",
+            "  type: grafana-azure-monitor-datasource",
+            "  access: proxy",
+            "  jsonData:",
+            "      cloudName: azuremonitor",
+            "      tenantId: ${2:xxxx-xxxx-xxxx-xxxx}",
+            "      clientId: ${3:xxxx-xxxx-xxxx-xxxx}",
+            "      subscriptionId: ${4:xxxx-xxxx-xxxx-xxxx}",
+            "      azureLogAnalyticsSameAs: true",
+            "      # logAnalyticsTenantId: ${2:xxxx-xxxx-xxxx-xxxx}",
+            "      # logAnalyticsClientId: ${3:xxxx-xxxx-xxxx-xxxx}",
+            "      # logAnalyticsSubscriptionId: ${4:xxxx-xxxx-xxxx-xxxx}",
+            "      # logAnalyticsDefaultWorkspace: ",
+            "      # appInsightsAppId: ",
+            "  secureJsonData:",
+            "      clientSecret: ${5:xxxxxxxxxxxxxxxx}",
+            "      # logAnalyticsClientSecret: ${5:xxxxxxxxxxxxxxxx}",
+            "      # appInsightsApiKey: ",
+            ""
+        ],
+        "description": "Azure Monitor Datasource - Grafana"
+    },
+    "Azure Monitor Application Insights Datasource": {
+        "prefix": "grafana-datasources-azure-application-insights",
+        "body": [
+            "- name: ${1:Application Insights}",
+            "  type: grafana-azure-monitor-datasource",
+            "  access: proxy",
+            "  jsonData:",
+            "      appInsightsAppId: ${2}",
+            "  secureJsonData:",
+            "      appInsightsApiKey: ${3}",
+            ""
+        ],
+        "description": "Azure Monitor Application Insights Datasource - Grafana"
+    }
+}

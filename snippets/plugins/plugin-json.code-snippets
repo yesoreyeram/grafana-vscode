@@ -1,0 +1,33 @@
+{
+    "Grafana Plugin Json": {
+        "prefix": "grafana-plugin-json",
+        "body": [
+          "{",
+          "    \"\\$schema\": \"https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json\",",
+          "    \"id\": \"${1:username}-${2:pluginname}-panel\",",
+          "    \"name\": \"${3:plugin name}\",",
+          "    \"type\": \"panel\",",
+          "    \"dependencies\": {",
+          "        \"grafanaDependency\": \">7.0.0\"",
+          "    },",
+          "    \"info\": {",
+          "        \"version\": \"%VERSION%\",",
+          "        \"updated\": \"%TODAY%\",",
+          "        \"description\": \"${4:Plugin description}\",",
+          "        \"author\": {",
+          "            \"name\": \"${5:Author Name}\",",
+          "            \"url\": \"https://github.com/${1:username}\"",
+          "        },",
+          "        \"logos\": {",
+          "            \"small\": \"img/logo.png\",",
+          "            \"large\": \"img/logo.png\"",
+          "        },",
+          "        \"keywords\": [",
+          "            \"${3:plugin name}\"",
+          "        ]",
+          "    }",
+          "}"
+        ],
+        "description": "Grafana Plugin Json"
+      }
+}

@@ -1,0 +1,62 @@
+{
+    "name": "grafana",
+    "displayName": "Grafana",
+    "description": "Grafana authoring tools for VS Code",
+    "version": "0.0.1",
+    "publisher": "yesoreyeram",
+    "author": {
+        "name": "Sriramajeyam Sugumaran",
+        "url": "https://github.com/yesoreyeram"
+    },
+    "repository": {
+        "url": "https://github.com/yesoreyeram/grafana-vscode"
+    },
+    "scripts": {
+        "build": "vsce package"
+    },
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "keywords": [
+        "Grafana",
+        "Observability",
+        "Dashboards"
+    ],
+    "categories": [
+        "Snippets",
+        "Data Science",
+        "Visualization"
+    ],
+    "icon": "grafana.png",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "json",
+                "path": "./snippets/dashboards/grafana-dashboard.code-snippets"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/dashboards/panels.code-snippets"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/dashboards/grafana-queries.code-snippets"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/plugins/plugin-json.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/provisioning/datasources.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/provisioning/notifiers.code-snippets"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vsce": "^1.81.1"
+    }
+}

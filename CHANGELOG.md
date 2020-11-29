@@ -1,0 +1,11 @@
+# Change Log
+
+All notable changes to the "yesoreyeram.grafana" extension will be documented in this file.
+
+## [0.0.1]
+
+- Initial version
+- Datasources, Notifiers provisioning snippets
+- Dashboard snippets
+- Plugin JSON snippets
+- Github publish workflows added
