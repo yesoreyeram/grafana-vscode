@@ -6,6 +6,7 @@ VS Code extension to author Grafana dashboards, datasources, configurations and 
 [![](https://img.shields.io/visual-studio-marketplace/i/yesoreyeram.grafana?label=Marketplace%20Installs)](https://marketplace.visualstudio.com/items?itemName=yesoreyeram.grafana)
 [![](https://img.shields.io/visual-studio-marketplace/last-updated/yesoreyeram.grafana?label=Marketplace%20Last%20Updated)](https://marketplace.visualstudio.com/items?itemName=yesoreyeram.grafana)
 [![](https://img.shields.io/visual-studio-marketplace/v/yesoreyeram.grafana?color=green&label=Marketplace%20Version)](https://marketplace.visualstudio.com/items?itemName=yesoreyeram.grafana)
+[![](https://github.com/yesoreyeram/grafana-vscode/workflows/Release/badge.svg)](https://github.com/yesoreyeram/grafana-vscode/actions?query=workflow%3ARelease)
 
 ## Features
 
@@ -14,7 +15,7 @@ VS Code extension to author Grafana dashboards, datasources, configurations and 
 * Snippets for plugin contributors
 
 <p align="center">
-  <img width="600" height="600" src="https://user-images.githubusercontent.com/153843/100550212-488f2a00-3270-11eb-82d5-dca535488f2e.gif">
+  <img width="600" height="600" src="https://user-images.githubusercontent.com/153843/100552645-5d73b980-3280-11eb-9b78-91d536013e8f.gif">
 </p>
 <p align="center">
   <img width="600" height="400" src="https://user-images.githubusercontent.com/153843/100525142-07d2da80-31b6-11eb-8f78-9848b71692d4.gif">
