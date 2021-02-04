@@ -10,6 +10,7 @@ VS Code extension to author Grafana dashboards, datasources, configurations and 
 
 ## Features
 
+* Snippets for configuration ini files authoring
 * Snippets for datasources, notifiers configuration / provisioning
 * Snippets for dashboard authoring
 * Snippets for plugin contributors

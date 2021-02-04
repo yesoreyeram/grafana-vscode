@@ -2,6 +2,10 @@
 
 All notable changes to the "yesoreyeram.grafana" extension will be documented in this file.
 
+## [0.0.2]
+
+- Config ini snippets 
+
 ## [0.0.1]
 
 - Initial version

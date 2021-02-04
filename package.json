@@ -2,7 +2,7 @@
     "name": "grafana",
     "displayName": "Grafana",
     "description": "Grafana authoring tools for VS Code",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "yesoreyeram",
     "author": {
         "name": "Sriramajeyam Sugumaran",
@@ -53,6 +53,26 @@
             {
                 "language": "yaml",
                 "path": "./snippets/provisioning/notifiers.code-snippets"
+            },
+            {
+                "language": "ini",
+                "path": "./snippets/config/grafana-config.code-snippets"
+            },
+            {
+                "language": "ini",
+                "path": "./snippets/config/users-and-auth.code-snippets"
+            },
+            {
+                "language": "ini",
+                "path": "./snippets/config/log.code-snippets"
+            },
+            {
+                "language": "ini",
+                "path": "./snippets/config/external-image-store.code-snippets"
+            },
+            {
+                "language": "ini",
+                "path": "./snippets/config/plugins/grafana-image-renderer.code-snippets"
             }
         ]
     },

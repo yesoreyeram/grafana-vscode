@@ -1,0 +1,72 @@
+{
+  "Grafana Configuration - Image stroe": {
+    "prefix": "grafana-config-external_image_storage",
+    "body": [
+      "[external_image_storage]",
+      "# Used for uploading images to public servers so they can be included in slack/email messages.",
+      "# You can choose between (s3, webdav, gcs, azure_blob, local)",
+      "provider ="
+    ],
+    "description": "Grafana Configuration - Image stroe"
+  },
+  "Grafana Configuration - S3 Image strorage": {
+    "prefix": "grafana-config-external_image_storage-s3",
+    "body": [
+      "[external_image_storage.s3]",
+      "endpoint =",
+      "path_style_access =",
+      "bucket_url =",
+      "bucket =",
+      "region =",
+      "path =",
+      "access_key =",
+      "secret_key =",
+      ""
+    ],
+    "description": "Grafana Configuration - S3 Image strorage"
+  },
+  "Grafana Configuration - Webdav Image strorage": {
+    "prefix": "grafana-config-external_image_storage-webdav",
+    "body": [
+      "[external_image_storage.webdav]",
+      "url =",
+      "username =",
+      "password =",
+      "public_url =",
+      ""
+    ],
+    "description": "Grafana Configuration - Webdav Image strorage"
+  },
+  "Grafana Configuration - GCS Image strorage": {
+    "prefix": "grafana-config-external_image_storage-gcs",
+    "body": [
+      "[external_image_storage.gcs]",
+      "key_file =",
+      "bucket =",
+      "path =",
+      "enable_signed_urls = false",
+      "signed_url_expiration =",
+      ""
+    ],
+    "description": "Grafana Configuration - GCS Image strorage"
+  },
+  "Grafana Configuration - Azure Blob Image strorage": {
+    "prefix": "grafana-config-external_image_storage-azure-blob",
+    "body": [
+      "[external_image_storage.azure_blob]",
+      "account_name =",
+      "account_key =",
+      "container_name =",
+      ""
+    ],
+    "description": "Grafana Configuration - Azure Blob Image strorage"
+  },
+  "Grafana Configuration - Local": {
+    "prefix": "grafana-config-external_image_storage-local",
+    "body": [
+      "[external_image_storage.local]",
+      "# does not require any configuration"
+    ],
+    "description": "Grafana Configuration - Local"
+  }
+}
