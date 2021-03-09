@@ -30,7 +30,7 @@
     "Visualization"
   ],
   "icon": "grafana.png",
-  "main": "./dist/extension.js",
+  "main": "./out/extension.js",
   "activationEvents": [
     "*"
   ],
@@ -95,29 +95,9 @@
         "title": "Grafana : Upload Dashboard JSON"
       }
     ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "grafana-explorer",
-          "title": "Grafana Explorer",
-          "icon": "grafana.png"
-        }
-      ]
-    },
-    "views": {
-      "grafana-explorer": [
-        {
-          "id": "grafana-dashboards",
-          "name": "Dashboards"
-        }
-      ]
-    },
-    "viewsWelcome": [
-      {
-        "view": "grafana-dashboards",
-        "contents": "List of Dashboards goes here. WIP"
-      }
-    ]
+    "viewsContainers": {},
+    "views": {},
+    "viewsWelcome": []
   },
   "devDependencies": {
     "@types/node": "^14.14.32",
