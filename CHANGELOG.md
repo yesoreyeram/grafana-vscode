@@ -2,6 +2,11 @@
 
 All notable changes to the "yesoreyeram.grafana" extension will be documented in this file.
 
+## [0.0.3]
+
+- Download grafana dashboard JSON
+- Upload grafana dashboard JSON
+
 ## [0.0.2]
 
 - Config ini snippets 
