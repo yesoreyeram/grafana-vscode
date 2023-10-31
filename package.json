@@ -1,8 +1,8 @@
 {
     "name": "grafana",
-    "displayName": "Grafana",
+    "displayName": "Grafana Utils",
     "description": "Grafana authoring tools for VS Code",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "yesoreyeram",
     "author": {
         "name": "Sriramajeyam Sugumaran",

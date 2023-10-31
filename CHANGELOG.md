@@ -2,6 +2,10 @@
 
 All notable changes to the "yesoreyeram.grafana" extension will be documented in this file.
 
+## [0.0.3]
+
+- Plugin display name changed from `Grafana` to `Grafana Utils` to support official grafana plugin.
+
 ## [0.0.2]
 
 - Config ini snippets 
